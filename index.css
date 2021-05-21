@@ -1,0 +1,62 @@
+body{
+    background-color: #2b432e;
+    margin: 3;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". message ."
+    "main main main";
+}
+.main{
+    grid-area: main;
+}
+.image{
+    flex: 30%;
+}
+.flexbox{
+    display: flex;
+    flex-direction: row;
+}
+p {
+    font-family: 'body-font', sans-serif;
+    font-size: 2vw;
+    color: #afe0b1;
+    text-align: center;
+}
+.enter{
+    flex: 70%;
+    grid-area: enter;
+}
+.enter a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 6vw;
+    font-family: 'body-font', sans-serif;
+    text-align: center;
+}
+@font-face{
+    font-family: body-font;
+    src: url(tachyon.ttf);
+}
+@media screen and (max-width: 769px) {
+    .flexbox{
+        flex-direction: column-reverse;
+    }
+    .image{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p {
+        font-size: 4vw;
+    }
+    .enter a{
+        font-size: 6vw;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+}
